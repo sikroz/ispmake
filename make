@@ -3,10 +3,8 @@
 import os
 import remote
 import sys
-try:
-	DEFAULT_HOST = os.environ['DEFAULT_SERVER']
-except KeyError:
-	DEFAULT_HOST = 'd64'
+import config
+DEFAULT_HOST = config.build_server
 
 def upload_source(args):
 	server = args[1]

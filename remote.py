@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import subprocess
 import os
-CORE = os.path.join(os.environ['HOME'], "ISP", "core-manager")
+import config
+CORE = config.core_manager_source_path
 def branch(path):
 	branch = ''
 	proc = subprocess.Popen(['git', '-C', path, 'branch'], stdout=subprocess.PIPE)
